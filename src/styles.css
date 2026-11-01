@@ -18,3 +18,8 @@
 @keyframes hero-ring-turn{from{transform:rotate(-28deg)}to{transform:rotate(332deg)}}
 .hero-orbit{animation:hero-ring-turn 45s linear infinite}
 @media(prefers-reduced-motion:reduce){.hero-orbit{animation:none}}
+
+/* Turn through depth like a coin, keeping the composition's resting angle. */
+@keyframes hero-ring-depth{from{transform:perspective(1000px) rotate(-28deg) rotateY(0deg)}to{transform:perspective(1000px) rotate(-28deg) rotateY(360deg)}}
+.hero-orbit{animation:hero-ring-depth 22s linear infinite;opacity:1;transform-style:preserve-3d;filter:brightness(1.28)}
+@media(prefers-reduced-motion:reduce){.hero-orbit{animation:none;transform:rotate(-28deg)}}
